@@ -1,0 +1,429 @@
+/* ============================================= */
+/* --- 1. Global & Base Styles --- */
+/* ============================================= */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f8f9fa;
+  /* A very light grey background for the page */
+  color: #212529;
+}
+
+
+/* ============================================= */
+/* --- 2. Header Styles --- */
+/* ============================================= */
+
+header {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+header>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Header Navigation --- */
+header ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+header a {
+  color: #2d3748;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease-in-out;
+  border-bottom: 2px solid transparent;
+}
+
+header a:hover {
+  color: #4299e1;
+}
+
+/* --- Header Brand/Logo --- */
+header>div>a {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* --- Active Navigation Link --- */
+header ul a.active {
+  color: #4299e1;
+  border-bottom: 2px solid #4299e1;
+}
+
+
+/* ============================================= */
+/* --- 3. Accordion List Styles --- */
+/* ============================================= */
+
+.section-accordion {
+  list-style-type: none;
+  padding: 0;
+  margin: 2rem auto;
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-accordion a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Individual Accordion Item --- */
+.section-accordion li {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-accordion li>a {
+  flex-grow: 1;
+}
+
+/* --- Accordion Item Delete Button --- */
+.section-accordion li button {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #e53e3e;
+  /* A standard red for delete actions */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+  /* Prevents the button from shrinking */
+}
+
+/* --- Delete Button Hover State --- */
+.section-accordion li button:hover {
+  background-color: #c53030;
+  /* A darker red on hover */
+  transform: translateY(-1px);
+}
+
+/* --- Delete Button Focus State (for accessibility) --- */
+.section-accordion li button:focus {
+  outline: 2px solid #e53e3e;
+  outline-offset: 2px;
+}
+
+.section-accordion li:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.section-accordion li p:first-of-type {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+}
+
+.section-accordion li p:last-of-type {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* ============================================= */
+/* --- 4. Details Page Styles --- */
+/* ============================================= */
+
+.section-details {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.section-details h1 {
+  font-size: 2rem;
+  color: #1a202c;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.section-details p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.section-details>div {
+  margin-bottom: 2rem;
+  /* Space between details and button */
+}
+
+/* --- Details Page Button --- */
+.section-details>a {
+  text-decoration: none;
+}
+
+.section-details button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #4299e1;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.section-details button:hover {
+  background-color: #3182ce;
+  transform: translateY(-2px);
+}
+
+
+/* ============================================= */
+/* --- 5. Footer Styles --- */
+/* ============================================= */
+
+footer {
+  background-color: #f2f2f2;
+  color: #555;
+  text-align: center;
+  padding: 15px 0;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 3rem;
+  /* Add some space above the footer */
+}
+
+footer p {
+  margin: 0;
+}
+
+
+/* Main container for the pagination controls */
+.pagination-section {
+  padding: 0;
+  /* This removes the top/bottom padding you had before */
+  display: flex;
+  justify-content: center;
+  /* Horizontally center the items */
+  align-items: center;
+  /* Vertically align the items */
+  gap: 1rem;
+  /* Creates space between the buttons and the page number */
+  padding: 1.5rem 0;
+  /* Adds some vertical spacing around the component */
+  font-family: sans-serif;
+}
+
+/* Styling for the 'Prev' and 'Next' buttons */
+.pagination-section button {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for buttons that are NOT disabled */
+.pagination-section button:hover:not(:disabled) {
+  background-color: #e9e9e9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the disabled button state */
+.pagination-section button:disabled {
+  background-color: #f5f5f5;
+  color: #b0b0b0;
+  cursor: not-allowed;
+  /* Indicates the button is not clickable */
+  border-color: #eee;
+}
+
+/* Styling for the page number text */
+.pagination-section p {
+  margin: 0;
+  /* Removes default paragraph margin */
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Basic styling for the select dropdown */
+.select-section {
+  /* Remove default browser styling */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Custom styles */
+  padding: 10px 40px 10px 15px;
+  /* Add padding, leaving space on the right for the arrow */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-size: 1rem;
+  font-family: sans-serif;
+  color: #333;
+  cursor: pointer;
+  min-width: 100px;
+  /* Set a minimum width */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  /* Custom arrow using a background SVG */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-13%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2013l128%20127.9c3.6%203.6%207.8%205.4%2013%205.4s9.4-1.8%2013-5.4L287%2095.2c3.6-3.6%205.4-7.8%205.4-13%200-5-1.8-9.4-5.4-13z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 10px;
+}
+
+/* Hover effect */
+.select-section:hover {
+  border-color: #888;
+}
+
+/* Focus effect for better accessibility */
+.select-section:focus {
+  outline: none;
+  /* Remove default outline */
+  border-color: #007bff;
+  /* Highlight with a blue border */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  /* Add a soft glow */
+}
+
+
+.controls-wrapper {
+  display: flex;
+  justify-content: center;
+  /* Centers the whole group of controls */
+  align-items: center;
+  /* Vertically aligns the pagination and select box */
+  gap: 2rem;
+  /* Adds space between the pagination and the select box */
+  flex-wrap: wrap;
+  /* Allows items to stack on smaller screens */
+  margin: 2rem 0;
+  /* Adds some vertical space around the control group */
+}
+
+
+
+/* === Infinite Scroll Component Styles === */
+
+/* --- Main container for the whole component --- */
+.infinite-scroll-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #1a1a1b; /* A modern dark background */
+  color: #d7dadc;
+  border-radius: 12px;
+  border: 1px solid #343536;
+}
+
+/* --- Title Styling --- */
+.infinite-scroll-title {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+/* --- List & List Item Styles --- */
+.user-list {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Creates space between list items */
+}
+
+.user-list-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between avatar and name */
+  background-color: #272729;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #343536;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.user-list-item:hover {
+  background-color: #3a3a3c;
+  transform: translateY(-3px); /* Slight lift effect on hover */
+  cursor: pointer;
+}
+
+/* --- User Avatar & Name Styles --- */
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Makes the image circular */
+  border: 2px solid #4f9dff; /* Adds a highlight color */
+  object-fit: cover;
+}
+
+.user-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #f0f2f5;
+  margin: 0;
+}
+
+/* --- Status Messages (Loading, Error, and Footer) --- */
+.status-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Centers the message on the screen */
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #d7dadc;
+}
+
+.status-message.error {
+  color: #ff4500; /* A distinct color for error messages */
+}
+
+.loader-status {
+  text-align: center;
+  padding: 2rem 0 1rem;
+  font-size: 1rem;
+  color: #818384;
+  font-weight: 500;
+  min-height: 30px; /* Prevents layout shift when text changes */
+}
