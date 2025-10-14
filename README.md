@@ -13,20 +13,26 @@ This repository demonstrates usage of **React Query (TanStack Query)** in a Reac
 ## 📁 Project Structure
 
 ```
+ReactQuery/
+│
+├── 📁 public/
+│
+├── 📁 src/
+│   ├── 📁 api/
+│   │   └── api.js                 # API functions (fetchPosts, deletePost, updatePost, fetchUsers)
+│   │
+│   ├── 📁 components/ or pages/
+│   │   ├── FetchRQ.jsx            # Demonstrates pagination, delete/update mutations
+│   │   └── InfiniteScroll.jsx     # Demonstrates infinite scroll with Intersection Observer
+│   │
+│   ├── App.jsx                    # Root component and router setup
+│   └── main.jsx                   # Entry point for React + Vite
+│
+├── .gitignore
+├── package.json
+├── vite.config.js
+└── README.md
 
-/public
-/src
-/api
-api.js            # API functions: fetchPosts, deletePost, updatePost, fetchUsers
-/components or pages
-FetchRQ.jsx       # Example with pagination + mutations
-InfiniteScroll.jsx  # Infinite scroll example
-index.jsx            # App entry
-App.jsx               # Routing / layout
-.gitignore
-package.json
-vite.config.js
-README.md
 
 ```
 
