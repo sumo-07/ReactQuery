@@ -1,4 +1,4 @@
-# ReactQuery Demo / Sample
+# ReactQuery
 
 This repository demonstrates usage of **React Query (TanStack Query)** in a React + Vite setup, including features like:
 
