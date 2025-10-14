@@ -45,7 +45,8 @@ ReactQuery/
 - TanStack Query (React Query vX) for data fetching, caching, mutation  
 - react-intersection-observer for detecting scroll visibility  
 - Axios (or fetch) for API calls  
-- CSS / basic styling  
+- CSS / basic styling
+- Note: there is a rate limit in the github api 
 
 ---
 
