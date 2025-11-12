@@ -25,7 +25,9 @@ export const FetchRQ = () => {
         queryKey: ["posts", pageNumber, filter], // like useState(),   this is the unnique key that identifies the data you're fetching, if another component also uses queryKey: ["posts"], it'll reuse the cached data instead of refetching from the server, so it must be unique
         queryFn: () => getPostData(pageNumber, filter), //like useEffect(),   
         // gcTime: 1000 * 60 * 5, // default time 5min hota hai , removes cache after this much time of inactivity, referesh krne pe component unmounts and then remounts again, so cache data bhi clear hojayega and baaki cheeze bhiii
-        staleTime: 5000,
+        // api is called everytime, only you are getting the data from the cache
+        staleTime: 5000, // tells ki kitne time tk data hmaara fresh and uss time tk ke liye refetch nhi hota hai, by default staleTime is 0 (means data fetch hote hee stale bn jata hai). isss time period mei you will get the data from cache and the api will not be called
+        // you have to check whether the data is stale or not, react query won't automatically know whether the cache have updated data or not
         // refetchInterval: 1000, // this is called polling
         // refetchIntervalInBackground: true,
         placeholderData: keepPreviousData, // jb page aage kr rhe hai toh loading ata hai, issko lgaane ke baad woh tb tk purana data dikhata hai(pichle page ka) and jb nya data ajata hai toh use display krdeta hai, issee loading nhi ata hai
