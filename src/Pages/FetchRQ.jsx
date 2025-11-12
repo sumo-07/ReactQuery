@@ -64,7 +64,7 @@ export const FetchRQ = () => {
         setFilter(Number(e.target.value));
     }
 
-    //isLoading() ---> doubt---> diff between isLoading and isPending
+    //isLoading() ---> doubt---> diff between isLoading and isPending----> isLoading same as isPending but it is the old name of isPending
     if (isPending) return <p>Loading...</p> // first loading ke liye isPending, and uske baad isPending stays false
     if (isError) return <p>Error: {error.message || "Something went wrong!"}</p>
 
