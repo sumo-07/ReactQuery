@@ -30,7 +30,7 @@ export const FetchRQ = () => {
         // you have to check whether the data is stale or not, react query won't automatically know whether the cache have updated data or not
         // refetchInterval: 1000, // this is called polling
         // refetchIntervalInBackground: true,
-        placeholderData: keepPreviousData, // jb page aage kr rhe hai toh loading ata hai, issko lgaane ke baad woh tb tk purana data dikhata hai(pichle page ka) and jb nya data ajata hai toh use display krdeta hai, issee loading nhi ata hai
+        placeholderData: keepPreviousData, // jb page aage kr rhe hai toh loading ata hai, issko lgaane ke baad woh tb tk purana data dikhata hai(pichle page ka) and jb nya data ajata hai toh usee display krdeta hai, issee loading nhi ata hai
     });
 
     //mutation function to delete the post
@@ -94,8 +94,8 @@ export const FetchRQ = () => {
             <div className="controls-wrapper">
                 <div className="pagination-section container">
                     <button disabled={pageNumber === 0 || isFetching} onClick={() => setPageNumber((prev) => prev - 1)} >Prev</button>
-                    {/* mereko pta tha res.data mei 100 posts hai isliye nikaal liya total pages wrna nhi nikaal jaa skta because api endpoint mei limit hai jisse woh current res mei jitne post mile uski length btayega */}
-                    <p> {pageNumber + 1} of {Math.ceil(100 / filter)}</p>
+                    {/* mereko pta tha res.data mei 100 posts hai isliye nikaal liya total pages wrna nhi nikaal jaa skta because api endpoint mei limit hai jisse woh current res mei jitne post mile uski length btayega,  ceil()---> rounds a number up to the nearest integer*/}
+                    <p> {pageNumber + 1} of {Math.ceil(100 / filter)}</p> 
                     {/* there is one problem, iss next button ko last post ke baad disable kaise kru */}
                     <button disabled={ isFetching} onClick={() => setPageNumber((prev) => prev + 1)} >Next</button>
                 </div>
