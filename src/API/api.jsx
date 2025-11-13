@@ -31,7 +31,7 @@ export const deletePost= (id)=>{
 
 //to update the post
 export const updatePost= (id)=>{
-    return api.patch(`/posts/${id}`, {title: "I have updated"});
+    return api.patch(`/posts/${id}`, {title: "I have updated"}); // patch updates partially
 }
 
 

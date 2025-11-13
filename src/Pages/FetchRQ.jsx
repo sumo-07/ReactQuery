@@ -37,10 +37,10 @@ export const FetchRQ = () => {
     const deleteMutation= useMutation({
         mutationFn: (id)=> deletePost(id),
         onSuccess: (data, id)=>{
-            console.log(data,id);
+            console.log(data,id); //data is the info about ki delete hua ya nhi(it is an object)
             
             queryClient.setQueryData(["posts", pageNumber, filter], (currElem)=>{
-                return currElem?.filter((post)=> post.id !== id);
+                return currElem?.filter((post)=> post.id !== id); // iti is possible ki koi cached data na ho toh isliye optional chaining lgaaya hai
             }); // queryClient.setQueryData is used to update the cached data for a specific query.
 
 
@@ -51,7 +51,7 @@ export const FetchRQ = () => {
     const updateMutation= useMutation({
         mutationFn: (id)=> updatePost(id),
         onSuccess: (apiData, postId)=>{
-            console.log(apiData, postId);
+            console.log("apidata= ",apiData, postId);
             queryClient.setQueryData(["posts", pageNumber, filter], (postsData)=>{
                 return postsData?.map((currPost)=> {
                     return currPost.id === postId ? {...currPost, title: apiData.data.title} : currPost;
