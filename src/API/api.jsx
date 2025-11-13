@@ -37,7 +37,7 @@ export const updatePost= (id)=>{
 
 
 // Infinite Scrolling
-export const fetchUsers= async({pageParam = 1})=>{
+export const fetchUsers= async({pageParam = 1})=>{ // pageParam is the pageNumber
     try{
         const res= await axios.get(`https://api.github.com/users?per_page=10&page=${pageParam}`)
         return res.data;      

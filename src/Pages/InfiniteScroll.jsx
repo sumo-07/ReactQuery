@@ -64,7 +64,7 @@ export const InfiniteScroll = () => {
             <div ref={ref} className="loader-status">
                 {isFetchingNextPage
                     ? "Loading More..."
-                    : hasNextPage
+                    : hasNextPage // it decides from the getNextPageParam, if it returns some value, hasNextPage becomes true, if undefined then it becomes false
                         ? "Scroll down to load more"
                         : "No more users"}
             </div>
